@@ -1,0 +1,90 @@
+<app-homeheader></app-homeheader>
+<div class="container">
+    <div class="main-body">
+    
+          <!-- Breadcrumb -->
+          <nav aria-label="breadcrumb" class="main-breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+              <li class="breadcrumb-item"><a href="javascript:void(0)">User</a></li>
+              <li class="breadcrumb-item active" aria-current="page">User Profile</li>
+            </ol>
+          </nav>
+          <!-- /Breadcrumb -->
+ <div></div>   
+ <div>                     
+                      <!-- BEGIN SIDEBAR & CONTENT -->
+                      <div class="row margin-bottom-40">
+                        <!-- BEGIN SIDEBAR -->
+                        <div class="sidebar col-md-3 col-sm-3">
+                          <ul class="list-group margin-bottom-25 sidebar-menu">
+                            <li class="list-group-item clearfix"><a class="nav-link scrollto" routerLink="/customerprofile"><i class="fa fa-angle-right"></i>View Profile</a></li>
+                            <li class="list-group-item clearfix"><a class="nav-link scrollto" routerLink="/update-password" ><i class="fa fa-angle-right"></i>Reset Password</a></li>
+                            <li class="list-group-item clearfix"><a class="nav-link scrollto" href="#addbook" ><i class="fa fa-angle-right"></i>Address book</a></li>
+                            <li class="list-group-item clearfix"><a class="nav-link scrollto" href="#widhlist" ><i class="fa fa-angle-right"></i>Wish list</a></li>
+                            <li class="list-group-item clearfix"><a class="nav-link scrollto" href="#cart" ><i class="fa fa-angle-right"></i>My Cart</a></li>
+                            <li class="list-group-item clearfix"><a class="nav-link scrollto" href="#orders" ><i class="fa fa-angle-right"></i>My Orders</a></li>
+                          </ul>
+              </div>
+            
+            <div class="col-md-8">
+              <div class="card mb-3">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Full Name</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                    {{customer.customerName}}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Email</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      {{customer.emailId}}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Phone</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      {{customer.phoneNo}}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">ID</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                    {{customer.customerId}}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Address</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                    
+                    </div>
+                  </div>
+                 
+
+              
+               
+                
+              </div>
+
+
+
+            </div>
+          </div>
+
+        </div>
+<app-footer></app-footer>

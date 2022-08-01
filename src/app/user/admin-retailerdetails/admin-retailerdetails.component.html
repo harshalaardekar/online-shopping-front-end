@@ -1,0 +1,150 @@
+<div class="wrapper">
+    <!-- Sidebar Holder -->
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <h3>Admin</h3>
+        </div>
+
+        <ul class="list-unstyled components">
+            <li>
+                <a routerLink="/admin-approve-retailer">Retailer Approval Request</a>
+            </li>
+            <li>
+                <a routerLink="/admin-view-retailers">View Retailer</a>
+            </li>
+            <li>
+                <a routerLink="/admin-approve-products">Product Approval Request</a>
+            </li>
+            <li>
+                <a routerLink="/admin-view-products">View Products</a>
+            </li>
+        </ul>
+
+        <ul class="list-unstyled CTAs">
+            
+            <li>
+                <a href="" class="article">Logout</a>
+            </li>
+        </ul>
+    </nav>
+
+
+    <!-- Page Content Holder -->
+    <div id="content">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+
+                <button type="button" id="sidebarCollapse" class="navbar-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <h2 class="text-center">Retailer Profile</h2>
+            
+        </nav>
+        
+
+        <!-- //content -->
+        <div>
+            
+            <div class="container rounded bg-white mt-2 mb-1">
+                <div class="row">
+                    <div class="col-md-9" style="margin-left: 20%;"> 
+
+                        <div class="col-md-8">
+                            <div class="card mb-3">
+                              <div class="card-body">
+                                <div class="row">
+                                    <div class="col-sm-5">
+                                      <input class="input" type="text" style="text-align: center;" disabled placeholder="Retailer Id :"/>
+                                      <h6 class="mb-0"></h6>
+                                    </div>
+                                    <div class="col-sm-7 text-secondary">
+                                      <input class="input" type="text" disabled placeholder=" {{retailer.retailerId}}"/>
+                                     
+                                    </div>
+                                  </div>
+                                  <hr>
+
+                                <div class="row">
+                                  <div class="col-sm-5">
+                                    <input class="input" type="text" style="text-align: center;" disabled placeholder="Retailer Name:"/>
+                                  </div>
+                                  <div class="col-sm-7 text-secondary">
+                                    <input class="input" type="text" disabled placeholder="{{retailer.retailerName}}"/>
+                                  </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                  <div class="col-sm-5">
+                                    <input class="input" type="text" style="text-align: center;" disabled placeholder="Password :"/>
+                                    <h6 class="mb-0"></h6>
+                                  </div>
+                                  <div class="col-sm-7 text-secondary">
+                                    <input class="input" type="text" disabled placeholder=" {{retailer.password}}"/>
+                                   
+                                  </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm-5">
+                                      <input class="input" type="text" style="text-align: center;" disabled placeholder="Email:"/>
+                                      <h6 class="mb-0"></h6>
+                                    </div>
+                                    <div class="col-sm-7 text-secondary">
+                                      <input class="input" type="text" disabled placeholder=" {{retailer.email}}"/>
+                                     
+                                    </div>
+                                  </div>
+                                  <hr>
+                                <div class="row">
+                                  <div class="col-sm-5">
+                                    <input class="input" type="text" style="text-align: center;" disabled placeholder="Phone No:"/>
+                                  </div>
+                                  <div class="col-sm-7 text-secondary">
+                                    <input class="input" type="text" placeholder="{{retailer.phoneNo}}"/>
+                                    
+                                  </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm-5">
+                                      <input class="input" type="text" style="text-align: center;" placeholder="GSTN No:"/>
+                                    </div>
+                                    <div class="col-sm-7 text-secondary">
+                                      <input class="input" type="text" disabled placeholder="{{retailer.gstnNo}}"/>
+                                      
+                                    </div>
+                                  </div>
+                                  <hr>
+
+                                  <!-- <img src="D:/retailerdocs/'{{retailer.addharCard}}'" alt="" style="height: 40px;width:50px;"> -->
+                                  <img src="http://localhost:9090/downloads/{{retailer.addharCard}}" alt="" style="height: 40px;width:50px;">
+                            </div>
+                  
+
+                            <button class="btn btn-success" (click)="approveRetailer()">Approve</button>
+                            
+                            <button class="btn btn-danger"(click)="removeRetailer()">Reject</button>
+                          </div>
+                        </div>
+                        <div>
+                            
+                        </div>
+
+
+
+                    </div>
+
+
+
+                     
+                </div>
+            </div>
+            
+        </div>
+        
+    </div>
+</div>

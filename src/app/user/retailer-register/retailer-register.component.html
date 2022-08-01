@@ -1,0 +1,143 @@
+
+
+<!-- BEGIN HEADER -->
+    
+<div class="header">
+    <div class="container">
+      <a class="site-logo" href="home.html"><img src="assets/pages/img/eShop.png" style="height:40px;" alt="Metronic Shop UI"></a>
+
+      <a href="javascript:void(0);" class="mobi-toggler"><i class="fa fa-bars"></i></a>
+
+
+      <!-- BEGIN NAVIGATION -->
+      <div class="header-navigation" >
+        <ul >
+          
+          <li><a class="nav-link scrollto" routerLink="/retailer-login">Retailer</a></li>
+          
+          </ul>
+      </div>
+      <!-- END NAVIGATION -->
+    </div>
+  </div>
+
+  <!-- Header END -->
+<section class="vh-100">
+    <div class="container-fluid h-custom">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-md-9 col-lg-6 col-xl-5">
+          <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
+            class="img-fluid" alt="Sample image">
+        </div>
+        <div class="col-md-12 col-lg-6 col-xl-4 offset-xl-1" style="margin-top:25px;">
+            <br/>
+          <form #regForm="ngForm">
+            <h1 style="margin-left:30%">Retailer Register </h1>
+
+            
+
+            <h2 style="margin-left:40%">Register</h2>
+            <div class="form-outline mb-4">
+                
+                <label class="form-label" style="margin-left:25.5%" for="form3Example3">Name</label>
+                <input type="text" id="form3Example3" class="form-control form-control-lg" [(ngModel)]="retailerreg.retailerName" [ngModelOptions]="{standalone: true}" style="width:350px; margin-left:25%"
+                  placeholder="Enter full name" />
+              </div>
+            <!-- Email input -->
+            <div class="form-outline mb-4">
+                
+              <label class="form-label" style="margin-left:25.5%" for="form3Example3">Email</label>
+              <input type="email" id="form3Example3" class="form-control form-control-lg" [(ngModel)]="retailerreg.email" [ngModelOptions]="{standalone: true}" style="width:350px; margin-left:25%"
+                placeholder="Enter a valid email" />
+            </div>
+
+            <div class="form-outline mb-4">
+                
+                <label class="form-label" style="margin-left:25.5%" for="form3Example3">Mobile No</label>
+                <input type="number" id="form3Example3" class="form-control form-control-lg" [(ngModel)]="retailerreg.phoneNo" [ngModelOptions]="{standalone: true}"style="width:350px; margin-left:25%"
+                  placeholder="Enter a valid Mobile no" />
+              </div>
+             
+              <div class="form-outline mb-3">
+                
+                <label class="form-label" style="margin-left:25.5%" for="form3Example4">GSTN No</label>
+                <input type="text" id="form3Example4" class="form-control form-control-lg" [(ngModel)]="retailerreg.gstnNo" [ngModelOptions]="{standalone: true}"style="width:350px; margin-left:25%"
+                  placeholder="Enter GSTN No" />
+              </div>
+            <!-- Password input -->
+            <div class="form-outline mb-3">
+                
+              <label class="form-label" style="margin-left:25.5%" for="form3Example4">Password</label>
+              <input type="password" id="form3Example4" class="form-control form-control-lg" [(ngModel)]="retailerreg.password" [ngModelOptions]="{standalone: true}"style="width:350px; margin-left:25%"
+                placeholder="Enter password" />
+            </div>
+
+            <div class="form-outline mb-3">
+                
+                <label class="form-label" style="margin-left:25.5%" for="form3Example4">Confirm Password</label>
+                <input type="password" id="form3Example4" class="form-control form-control-lg" style="width:350px; margin-left:25%"
+                  placeholder="Confirm password" />
+              </div>
+  
+            <div class="d-flex justify-content-between align-items-center">
+            </div>
+                <br/>
+
+            <div class="text-center text-lg-start mt-4 pt-2">
+              <!-- <button type="button" class="btn btn-primary btn-lg"
+              style="padding-left: 2.5rem; padding-right: 2.5rem;">Register</button> -->
+              <button type="button" class="btn btn-primary btn-lg"
+                style="padding-left: 2.5rem; padding-right: 2.5rem;" (click)="register()">Register</button>
+              
+            </div>
+  
+          </form>
+
+          <br/>
+
+          <!-- <form enctype="multipart/form-data" (ngSubmit)="upload()">
+            Select a profile pic : <input type="file" name="pp" (change)="onFileChange($event)"><br/>
+            <button type="submit">Upload</button>
+        </form> -->
+
+        <div class="text-center text-lg-start mt-4 pt-2">
+          <form enctype="multipart/form-data" (ngSubmit)="upload()">
+            <div class="form-outline mb-3">
+                
+              <label class="form-label" for="form3Example4">Upload Aadhar Card</label>
+              <input type="file" id="form3Example4" class="form-control form-control-lg" style="width:350px; margin-left:25%" placeholder="Upload aadhar card" (change)="onFileChange($event)" />
+              <button type="submit">Upload</button>
+            </div>
+          </form>
+
+          <br/>
+
+          <form enctype="multipart/form-data" (ngSubmit)="uploadpan()">
+            <div class="form-outline mb-3">
+                
+              <label class="form-label" for="form3Example4">Upload Pan Card</label>
+              <input type="file" id="form3Example4" class="form-control form-control-lg" style="width:350px; margin-left:25%" placeholder="Upload pan card" (change)="onFileChange1($event)" />
+              <button type="submit">Upload</button>
+            </div>
+          </form>
+
+          <br/>
+          
+          <form enctype="multipart/form-data" (ngSubmit)="uploadcert()">
+            <div class="form-outline mb-3">
+                
+              <label class="form-label" for="form3Example4">Upload Retailer Certificate</label>
+              <input type="file" id="form3Example4" class="form-control form-control-lg" style="width:350px; margin-left:25%" placeholder="Upload pan card" (change)="onFileChange2($event)" />
+              <button type="submit">Upload</button>
+            </div>
+          </form>
+              
+      </div>
+         
+        </div>
+      </div>
+    </div>
+   <h1></h1>
+  </section>
+  <app-footer></app-footer>
+

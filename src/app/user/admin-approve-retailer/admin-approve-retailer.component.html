@@ -1,0 +1,91 @@
+
+    <div class="wrapper">
+        <!-- Sidebar Holder -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>Admin</h3>
+            </div>
+
+            <ul class="list-unstyled components">
+                <li>
+                    <a routerLink="/admin-approve-retailer">Retailer Approval Request</a>
+                </li>
+                <li>
+                    <a routerLink="/admin-view-retailers">View Retailer</a>
+                </li>
+                <li>
+                    <a routerLink="/admin-approve-products">Product Approval Request</a>
+                </li>
+                <li>
+                    <a routerLink="/admin-view-products">View Products</a>
+                </li>
+            </ul>
+
+            <ul class="list-unstyled CTAs">
+                
+                <li>
+                    <a href="" class="article">Logout</a>
+                </li>
+            </ul>
+        </nav>
+
+
+        <!-- Page Content Holder -->
+        <div id="content">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="navbar-btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                
+                </div>
+                
+            </nav>
+            <br/><br/>
+            <div>
+                <table class="table table-bordered">
+                    <tr>
+                        <th>Retailer Details</th>
+                        <th>Retailer Id</th>
+                        <th>Retailer Name</th>
+                        <th>Phone No</th>
+                        <th>Gstn No</th>
+                        
+                        <th>ACTION</th>
+                       
+                    </tr>
+                    <br/>
+                    <tbody>
+                
+                        <tr *ngFor = "let u of retailer">
+                            <td>{{u.retailerId}}</td>
+                            <td>{{u.retailerName}}</td>
+                            <td>{{u.email}}</td>
+                             <td>{{u.phoneNo}}</td>
+                            <td>{{u.gstnNo}}</td>
+                            <!-- <td>{{u.mobile}}</td>
+                        <!-- <td>
+                            <select name="cars" id="cars" *ngFor = "let u of userdata">
+                            <option value={{u.userId}}>{{u.userName}}</option>
+                          </select>
+                        </td> -->
+                    
+                        <button type="submit" (click)="retailerInformation(u)" >View</button>
+                
+                        </tr>
+                    </tbody>
+                    <!-- <button type="submit" style="align: right;" routerLink="/addaddress" >Add Address</button> -->
+                </table>
+            </div>
+            <!-- <div style="margin-left:22% ;">
+                <h1 style="font-size: 50px;"><br/>Stop And Sell Over Here</h1>
+            </div> -->
+            
+        </div>
+    </div>
+

@@ -1,0 +1,104 @@
+<app-homeheader></app-homeheader>
+
+<div class="main">
+    <div class="container">
+      
+      <!-- BEGIN SIDEBAR & CONTENT -->
+      <div class="row margin-bottom-40">
+        <!-- BEGIN SIDEBAR -->
+        <div class="sidebar col-md-3 col-sm-3">
+          <ul class="list-group margin-bottom-25 sidebar-menu">
+            <li class="list-group-item clearfix"><a class="nav-link scrollto" routerLink="/myaccount"><i class="fa fa-angle-right"></i>View Profile</a></li>
+            <li class="list-group-item clearfix"><a class="nav-link scrollto" routerLink="/update-password" ><i class="fa fa-angle-right"></i>Reset Password</a></li>
+            <li class="list-group-item clearfix"><a class="nav-link scrollto" routerLink="/alladdress" ><i class="fa fa-angle-right"></i>Address book</a></li>
+            <li class="list-group-item clearfix"><a class="nav-link scrollto" routerLink="/wishlist" ><i class="fa fa-angle-right"></i>Wish list</a></li>
+            <li class="list-group-item clearfix"><a class="nav-link scrollto" routerLink="/mycart" ><i class="fa fa-angle-right"></i>My Cart</a></li>
+            <li class="list-group-item clearfix"><a class="nav-link scrollto" routerLink="/myorders" ><i class="fa fa-angle-right"></i>My Orders</a></li>
+            
+          </ul>
+        </div>
+        <!-- END SIDEBAR -->
+
+        <!-- <section id="hero" class="hero">hero</section>
+        <section id="rpass" class="rpass">rpass</section>
+        <section id="addbook" class="addbook">addbook</section>
+        <section id="widhlist" class="widhlist">widhlist</section>
+        <section id="cart" class="cart">cart</section>
+        <section id="orders" class="orders">orders</section> -->
+
+        <!-- BEGIN CONTENT -->
+    
+            <div class="container-fluid h-custom">
+              <div class="row d-flex justify-content-center align-items-center h-50">
+                <div class="col-md-12 col-lg-3 col-xl-5">
+                </div>
+                <div class="col-md-8 col-lg-6 col-xl-6 offset-xl-3" style="margin-top:50px;">
+                    <br/>
+                  <form >
+                    <h1 style="margin-left:30%">Add Address </h1>
+        
+                    
+        
+                    <div class="form-outline mb-4">
+                        
+                        <label class="form-label" style="margin-left:25.5%" for="form3Example3">House No</label>
+                        <input type="text" id="form3Example3" class="form-control form-control-lg" [(ngModel)]="address.houseNo" [ngModelOptions]="{standalone: true}" style="width:350px; margin-left:25%"
+                          placeholder="Enter House No" />
+                      </div>
+                    <!-- Email input -->
+                    <div class="form-outline mb-4">
+                        
+                      <label class="form-label" style="margin-left:25.5%" for="form3Example3">Street</label>
+                      <input type="text" id="form3Example3" class="form-control form-control-lg" [(ngModel)]="address.street" [ngModelOptions]="{standalone: true}" style="width:350px; margin-left:25%"
+                        placeholder="Enter Street Name" />
+                    </div>
+        
+                    <div class="form-outline mb-4">
+                        
+                        <label class="form-label" style="margin-left:25.5%" for="form3Example3">City</label>
+                        <input type="text" id="form3Example3" class="form-control form-control-lg" [(ngModel)]="address.city" [ngModelOptions]="{standalone: true}"style="width:350px; margin-left:25%"
+                          placeholder="Enter City Name" />
+                      </div>
+                     
+                      <div class="form-outline mb-3">
+                        
+                        <label class="form-label" style="margin-left:25.5%" for="form3Example4">State</label>
+                        <input type="text" id="form3Example4" class="form-control form-control-lg" [(ngModel)]="address.state" [ngModelOptions]="{standalone: true}"style="width:350px; margin-left:25%"
+                          placeholder="Enter State here" />
+                      </div>
+                    <!-- Password input -->
+                    <div class="form-outline mb-3">
+                        
+                      <label class="form-label" style="margin-left:25.5%" for="form3Example4">PinCode</label>
+                      <input type="text" id="form3Example4" class="form-control form-control-lg" [(ngModel)]="address.pinCode" [ngModelOptions]="{standalone: true}"style="width:350px; margin-left:25%"
+                        placeholder="Enter PinCode here" />
+                    </div>
+        
+                    <div class="form-outline mb-3">
+                        
+                        <label class="form-label" style="margin-left:25.5%" for="form3Example">Country</label>
+                        <input type="text" id="form3Example4" class="form-control form-control-lg" [(ngModel)]="address.country" [ngModelOptions]="{standalone: true}" style="width:350px; margin-left:25%"
+                          placeholder="Enter Country here" />
+                      </div>
+          
+                    <div class="d-flex justify-content-between align-items-center">
+                    </div>
+                        <br/>
+        
+                    <div class="text-center text-lg-start mt-4 pt-2">
+                      <button type="button" class="btn btn-primary btn-lg"
+                        style="padding-left: 2.5rem; padding-right: 2.5rem;" (click)="CustomerAddAddress()">Add</button>
+                      
+                    </div>
+          
+                  </form>
+                </div>
+              </div>
+            </div>
+        <!-- END CONTENT -->
+      </div>
+      <!-- END SIDEBAR & CONTENT -->
+    </div>
+  </div>
+
+<app-footer></app-footer>

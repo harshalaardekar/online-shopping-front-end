@@ -1,0 +1,71 @@
+<app-homeheader></app-homeheader>
+
+<div class="main">
+    <div class="container">
+      
+      <!-- BEGIN SIDEBAR & CONTENT -->
+      <div class="row margin-bottom-40">
+        <!-- BEGIN SIDEBAR -->
+        <div class="sidebar col-md-3 col-sm-3">
+          <ul class="list-group margin-bottom-25 sidebar-menu">
+            <li class="list-group-item clearfix"><a class="nav-link scrollto" routerLink="/myaccount"><i class="fa fa-angle-right"></i>View Profile</a></li>
+            <li class="list-group-item clearfix"><a class="nav-link scrollto" routerLink="/update-password" ><i class="fa fa-angle-right"></i>Reset Password</a></li>
+            <li class="list-group-item clearfix"><a class="nav-link scrollto" routerLink="/alladdress" ><i class="fa fa-angle-right"></i>Address book</a></li>
+            <li class="list-group-item clearfix"><a class="nav-link scrollto" routerLink="/wishlist" ><i class="fa fa-angle-right"></i>Wish list</a></li>
+            <li class="list-group-item clearfix"><a class="nav-link scrollto" routerLink="/mycart" ><i class="fa fa-angle-right"></i>My Cart</a></li>
+            <li class="list-group-item clearfix"><a class="nav-link scrollto" routerLink="/myorders" ><i class="fa fa-angle-right"></i>My Orders</a></li>
+            
+          </ul>
+        </div>
+        <!-- END SIDEBAR -->
+
+        <!-- <section id="hero" class="hero">hero</section>
+        <section id="rpass" class="rpass">rpass</section>
+        <section id="addbook" class="addbook">addbook</section>
+        <section id="widhlist" class="widhlist">widhlist</section>
+        <section id="cart" class="cart">cart</section>
+        <section id="orders" class="orders">orders</section> -->
+
+        <!-- BEGIN CONTENT -->
+        <div class="col-md-8">
+            <table class="table table-bordered">
+                <tr>
+                    <th>ADDRESS</th>
+                    <th></th><th></th><th></th><th></th><th></th>
+                    <th>ACTION</th>
+                   
+                </tr>
+                <br/>
+                <tbody>
+            
+                    <tr *ngFor = "let u of address">
+                        <td>{{u.houseNo}}</td>
+                        <td>{{u.street}}</td>
+                        <td>{{u.city}}</td>
+                        <td>{{u.state}}</td>
+                        <td>{{u.pinCode}}</td>
+                        <td>{{u.country}}</td>
+                        
+                        <!-- <td>{{u.mobile}}</td>
+                    <!-- <td>
+                        <select name="cars" id="cars" *ngFor = "let u of userdata">
+                        <option value={{u.userId}}>{{u.userName}}</option>
+                      </select>
+                    </td> -->
+                
+                    <button type="submit" ng-click="print()" >Update</button>
+                    <button type="submit" ng-click="print()" >Remove</button>
+            
+                    </tr>
+                </tbody>
+                <button type="submit" style="align: right;" routerLink="/addaddress" >Add Address</button>
+            </table>
+      </div>
+
+        <!-- END CONTENT -->
+      </div>
+      <!-- END SIDEBAR & CONTENT -->
+    </div>
+  </div>
+
+<app-footer></app-footer>

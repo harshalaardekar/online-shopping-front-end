@@ -1,0 +1,174 @@
+
+<!-- BEGIN HEADER -->
+    
+<div class="header">
+  <div class="container">
+    <a class="site-logo" href="home.html"><img src="assets/pages/img/eShop.png" style="height:40px;" alt="Metronic Shop UI"></a>
+
+    <a href="javascript:void(0);" class="mobi-toggler"><i class="fa fa-bars"></i></a>
+
+
+    <!-- BEGIN NAVIGATION -->
+    <div class="header-navigation" >
+      <ul >
+        <li><a class="nav-link scrollto" routerLink="/admin-login">Admin</a></li>
+        <li><a class="nav-link scrollto" routerLink="/retailer-login">Retailer</a></li>
+        <li><a class="nav-link scrollto" routerLink="/login" >User</a></li>
+        </ul>
+    </div>
+    <!-- END NAVIGATION -->
+  </div>
+</div>
+
+<!-- Header END -->
+<section class="vh-100">
+  <div class="container-fluid h-custom">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-md-9 col-lg-6 col-xl-5">
+        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
+          class="img-fluid" alt="Sample image">
+      </div>
+      <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1" style="margin-top:120px;">
+        <form >
+          <h1 style="margin-left:43%">User</h1>
+<!-- texthjgfyjcdjgfjhyfghjfkfukfh -->
+          <div style="text-align:center ">
+          <h3 style="color:red">{{message}}</h3></div>
+    <!-- texthjgfyjcdjgfjhyfghjfkfukfh -->
+    
+    
+          <!-- Email input -->
+          <div class="form-outline mb-4">
+              
+            <label class="form-label" style="margin-left:26%" for="adminId">Enter registered Email ID</label>
+            <input type="text" [(ngModel)]="login.emailId" #adminId=ngModel id="form3Example3" [ngModelOptions]="{standalone: true}" class="form-control form-control-lg" style="width:350px; margin-left:25%"
+              placeholder="Enter a valid Email Id" />
+              <div *ngIf="adminId.invalid && (adminId.dirty || adminId.touched)">
+
+                <div *ngIf="adminId.errors?.['required']" style="color:red">Enter name</div>
+  
+                <!-- <div *ngIf="adminId.errors?.['pattern']" style="color:red">Invalid name</div> -->
+  
+              </div>
+          </div>
+          
+
+          <!-- Password input -->
+          <div class="form-outline mb-3">
+              
+            <label class="form-label" style="margin-left:26%" for="adminpass">Password</label>
+            <input type="password" [(ngModel)]="login.password" #pass=ngModel id="form3Example4" [ngModelOptions]="{standalone: true}" class="form-control form-control-lg" style="width:350px; margin-left:25%"
+              placeholder="Enter password" />
+              <div *ngIf="pass.invalid && (pass.dirty || pass.touched)">
+
+                <div *ngIf="pass.errors?.['required']" style="color:red">Enter password</div>
+  
+                <!-- <div *ngIf="pass.errors?.['pattern']" style="color:red">Invalid password</div> -->
+  
+              </div>
+          </div>
+          <br/>
+  
+          
+
+          <div class="text-center text-lg-start mt-4 pt-2">
+            <button type="button" class="btn btn-primary btn-lg"
+              style="padding-left: 2.5rem; padding-right: 2.5rem;" (click)="CustomerLogin()">Login</button><br/>
+              <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a class="link-danger" routerLink="/user-register">Register</a></p>
+            
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+ <h1></h1>
+</section>
+
+    <!-- BEGIN PRE-FOOTER -->
+    <div class="pre-footer">
+      <div class="container">
+        <div class="row">
+          <!-- BEGIN BOTTOM ABOUT BLOCK -->
+          <div class="col-md-3 col-sm-6 pre-footer-col">
+            <h2>About us</h2>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam sit nonummy nibh euismod tincidunt ut laoreet dolore magna aliquarm erat sit volutpat. Nostrud exerci tation ullamcorper suscipit lobortis nisl aliquip  commodo consequat. </p>
+            <p>Duis autem vel eum iriure dolor vulputate velit esse molestie at dolore.</p>
+          </div>
+          <!-- END BOTTOM ABOUT BLOCK -->
+          <!-- BEGIN BOTTOM INFO BLOCK -->
+          <div class="col-md-3 col-sm-6 pre-footer-col">
+            <h2>Information</h2>
+            <ul class="list-unstyled">
+              <li><i class="fa fa-angle-right"></i> <a href="javascript:;">Delivery Information</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="javascript:;">Customer Service</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="javascript:;">Order Tracking</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="javascript:;">Shipping &amp; Returns</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="contacts.html">Contact Us</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="javascript:;">Careers</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="javascript:;">Payment Methods</a></li>
+            </ul>
+          </div>
+          <!-- END INFO BLOCK -->
+
+          
+
+          <!-- BEGIN BOTTOM CONTACTS -->
+          <div class="col-md-3 col-sm-6 pre-footer-col">
+            <h2>Our Contacts</h2>
+            <address class="margin-bottom-40">
+              35, Lorem Lis Street, Park Ave<br>
+              California, US<br>
+              Phone: 300 323 3456<br>
+              Fax: 300 323 1456<br>
+              Email: <a href="mailto:info@metronic.com">info@metronic.com</a><br>
+              Skype: <a href="skype:metronic">metronic</a>
+            </address>
+          </div>
+          <!-- END BOTTOM CONTACTS -->
+        </div>
+        <hr>
+      </div>
+    </div>
+    <!-- END PRE-FOOTER -->
+
+    <!-- BEGIN FOOTER -->
+    <div class="footer">
+      <div class="container">
+        <div class="row">
+          <!-- BEGIN COPYRIGHT -->
+          <div class="col-md-4 col-sm-4 padding-top-10">
+            2015 © Keenthemes. ALL Rights Reserved. 
+          </div>
+          <!-- END COPYRIGHT -->
+          <!-- BEGIN PAYMENTS -->
+          <div class="col-md-4 col-sm-4">
+            <ul class="list-unstyled list-inline pull-right">
+              <li><img src="assets/corporate/img/payments/american-express.jpg" alt="We accept American Express" title="We accept American Express"></li>
+              <li><img src="assets/corporate/img/payments/MasterCard.jpg" alt="We accept MasterCard" title="We accept MasterCard"></li>
+              <li><img src="assets/corporate/img/payments/PayPal.jpg" alt="We accept PayPal" title="We accept PayPal"></li>
+              <li><img src="assets/corporate/img/payments/visa.jpg" alt="We accept Visa" title="We accept Visa"></li>
+            </ul>
+          </div>
+          <!-- END PAYMENTS -->
+          <!-- BEGIN POWERED -->
+          <div class="col-md-4 col-sm-4 text-right">
+            <!-- <div class="col-md-6 col-sm-6 offset-md-3"> -->
+              <ul class="social-icons">
+                <li><a class="rss" data-original-title="rss" href="javascript:;"></a></li>
+                <li><a class="facebook" data-original-title="facebook" href="javascript:;"></a></li>
+                <li><a class="twitter" data-original-title="twitter" href="javascript:;"></a></li>
+                <li><a class="googleplus" data-original-title="googleplus" href="javascript:;"></a></li>
+                <li><a class="linkedin" data-original-title="linkedin" href="javascript:;"></a></li>
+                <li><a class="youtube" data-original-title="youtube" href="javascript:;"></a></li>
+                <li><a class="vimeo" data-original-title="vimeo" href="javascript:;"></a></li>
+                <li><a class="skype" data-original-title="skype" href="javascript:;"></a></li>
+              </ul>
+            <!-- </div> -->
+          </div>
+          <!-- END POWERED -->
+        </div>
+      </div>
+    </div>
+    <!-- END FOOTER -->
+
